@@ -1,0 +1,110 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0; 
+}
+
+.main {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.notice {
+    text-align: center;
+    padding: 5px;
+    margin-top: 15px;
+}
+
+.notice p {
+    width: fit-content; 
+    border: 1px solid red; 
+    text-align: center; 
+}
+
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:400");
+
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 40deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: '<percentage>';
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: '<percentage>';
+  initial-value: 0%;
+  inherits: true;
+}
+
+
+
+p {
+  margin: 0;
+}
+
+:root {
+  --d: 3000ms;
+  --angle: 40deg;
+  --gradX: 20%;
+  --gradY: 50%;
+  --c1: #d1b560;
+  --c2: #fff7e0;
+}
+
+.wrapper {
+ width: fit-content;
+ height: 50px;
+}
+
+.box {
+    margin-top:15px;
+    border:3px solid ;
+  padding: 5px;
+  border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.9turn, var(--c1) 0.45turn, var(--c2) 0.85turn) 2;
+  animation: borderRotate var(--d) linear infinite forwards;
+}
+
+.box:nth-child(2) {
+  border-image: radial-gradient(ellipse at var(--gradX) var(--gradY), var(--c1), var(--c1) 90%, var(--c2) 0%) 2;
+  animation: borderRadial var(--d) linear infinite forwards;
+}
+
+@keyframes borderRotate {
+  100% {
+    --angle: 420deg;
+  }
+}
+
+@keyframes borderRadial {
+  20% {
+    --gradX: 100%;
+    --gradY: 50%;
+  }
+  40% {
+    --gradX: 100%;
+    --gradY: 100%;
+  }
+  60% {
+    --gradX: 50%;
+    --gradY: 100%;
+  }
+  80% {
+    --gradX: 0%;
+    --gradY: 50%;
+  }
+  100% {
+    --gradX: 50%;
+    --gradY: 0%;
+  }
+}
