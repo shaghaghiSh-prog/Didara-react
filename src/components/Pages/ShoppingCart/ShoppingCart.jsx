@@ -16,7 +16,6 @@ export default function ShoppingCartPage() {
   };
 
   const { cart, removeFromCart, updateQuantity, totalPrice } = useCart();
-  console.log(cart);
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -29,7 +28,7 @@ export default function ShoppingCartPage() {
             {cart.map((item) => (
               <div
                 key={item.id}
-                className="flex justify-center items-center w-4/6 justify-between border rounded-xl   mt-3  py-4 hover:border-red-600"
+                className="flex  items-center w-4/6 justify-between border rounded-xl   mt-3  py-4 hover:border-red-600"
               >
                 <div className="image">
                   <img className="w-24" src={item.image.url} alt="" />

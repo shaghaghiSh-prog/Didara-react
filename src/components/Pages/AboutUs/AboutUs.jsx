@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/heading-has-content */
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useRef, useEffect, useState } from "react";
 import Footer from "../../Footer/Footer";
 import { AnimatePresence, motion } from "framer-motion";

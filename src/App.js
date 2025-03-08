@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import './components/Wrapper/Wrapper.css';
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';

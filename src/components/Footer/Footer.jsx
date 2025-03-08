@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { ChevronDown, MapPin, Phone, PhoneCall, ShieldCheck, Truck, CreditCard } from 'lucide-react';
 
 function Footer() {

@@ -1,76 +1,3 @@
-// "use client"
-
-// import { useState, useEffect } from "react"
-
-// const Alert = ({ message, type = "info", onClose }) => {
-//   const [progress, setProgress] = useState(0)
-
-//   useEffect(() => {
-//     const timer = setInterval(() => {
-//       setProgress((oldProgress) => {
-//         if (oldProgress === 100) {
-//           clearInterval(timer)
-//           return 100
-//         }
-//         return oldProgress + 2 // 2% every 100ms for 5 seconds
-//       })
-//     }, 100)
-
-//     return () => {
-//       clearInterval(timer)
-//     }
-//   }, [])
-
-//   const getAlertColor = () => {
-//     switch (type) {
-//       case "success":
-//         return "bg-green-100 border-green-500 text-green-700"
-//       case "error":
-//         return "bg-red-100 border-red-500 text-red-700"
-//       case "warning":
-//         return "bg-yellow-100 border-yellow-500 text-yellow-700"
-//       default:
-//         return "bg-blue-100 border-blue-500 text-blue-700"
-//     }
-//   }
-
-//   const getProgressColor = () => {
-//     switch (type) {
-//       case "success":
-//         return "bg-green-500"
-//       case "error":
-//         return "bg-red-500"
-//       case "warning":
-//         return "bg-yellow-500"
-//       default:
-//         return "bg-blue-500"
-//     }
-//   }
-
-//   return (
-//     <div  style={{ zIndex: 999999999999999999 }} className={`fixed top-4 flex  mt-2 right-4 w-80 border-l-4 p-4 rounded shadow-lg ${getAlertColor()} `}>
-//       <div className="flex justify-between items-center mb-2">
-//         <strong className="font-bold">{type.charAt(0).toUpperCase() + type.slice(1)}</strong>
-//         <button onClick={onClose} className="text-lg font-semibold">
-//           &times;
-//         </button>
-//       </div>
-//       <p>{message}</p>
-//       <div className="mt-2 w-full bg-gray-200 rounded-full h-1.5 dark:bg-gray-700">
-//         <div className={`h-1.5 rounded-full ${getProgressColor()}`} style={{ width: `${progress}%` }}></div>
-//       </div>
-//     </div>
-//   )
-// }
-
-// export default Alert
-
-
-
-
-
-"use client"
-
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
@@ -84,7 +11,7 @@ const Alert = ({ message, type = "info", style }) => {
           clearInterval(timer)
           return 100
         }
-        return oldProgress + 57.5 // 2% every 100ms for 5 seconds
+        return oldProgress + 57.5 
       })
     }, 650)
 

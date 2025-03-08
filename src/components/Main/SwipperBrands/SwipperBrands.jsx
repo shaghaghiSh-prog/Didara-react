@@ -95,6 +95,7 @@ function SwipperBrands() {
             <SwiperSlide key={brand.id}>
               <div className="flex items-center justify-center h-36 bg-white rounded-xl shadow-md transition-all duration-300 hover:shadow-lg hover:scale-105">
                 <img
+                alt=""
                   src={brand.img}
                   className="max-h-full max-w-full rounded-lg filter grayscale hover:grayscale-0 transition-all duration-300"
                 />
